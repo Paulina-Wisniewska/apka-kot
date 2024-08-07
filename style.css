@@ -44,3 +44,131 @@ p, h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
+
+:root {
+  --main: #FAEDCD;
+  --secondary: #CCD5AE;
+  --accent: #D4A373;
+  --secondary-light: #E9EDC9;
+  --main-light: #FEFAE0;
+}
+body {
+  background-color: var(--main);
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  background-color: var(--secondary);
+  height: 80px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.user-account {
+  display: flex;
+  flex-direction: row;
+  margin-right: 30px;
+  font-size: 20px;
+}
+
+.login-btn {
+  background: none;
+  border: none;
+  color: #ffff;
+  cursor: pointer;
+}
+
+.your-cats-h {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.your-cats-title {
+  color: #ffff;
+  font-size: 60px;
+  font-weight: 500;
+}
+
+.your-cats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.swipe-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 95px;
+}
+
+.cat-profile {
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.about-cat {
+  position: absolute;
+  top: 370px;
+  background-color: #ffff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 330px;
+}
+
+.basic-info {
+  border-top: solid 1px var(--accent);
+  color: var(--accent);
+  line-height: 35px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.cat-name {
+  color: var(--secondary);
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+
+.more-abt-cats {
+  border: none;
+  background-color: var(--secondary);
+  color: #ffff;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 5px;
+  width: 250px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.add-cat {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 100px;
+  padding: 30px;
+}
+
+.add-cat-btn {
+  border: none;
+  background-color: var(--secondary);
+  color: #ffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  border-radius: 15px;
+  width: 200px;
+  font-size: 20px;
+  cursor: pointer;
+}

@@ -1,12 +1,94 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
+    <header>
+      <div class="user-account">
+        <img src="icons/account.svg" alt="account">
+        <button class="login-btn">Login</button>
+      </div>
+    </header>
+    <div class="your-cats-h">
+      <h1 class="your-cats-title">YOUR CATS</h1>
+    </div>
+    <div class="your-cats">
+      <button class="swipe-btn">
+        <img src="icons/left.svg" alt="swipe-left">
+      </button>
+      <div class="cat-profile">
+        <img src="images/Lucyfer.jpg" alt="" class="cat-photo">
+        <div class="about-cat">
+          <h2 class="cat-name">Lucyfer</h2>
+          <div class="basic-info">
+            <p>Gender: Male</p>
+            <p>Breed: Maine Coon </p>
+            <p>Date of birth: 11.06.2022 r</p>
+          </div>
+          <button class="more-abt-cats">More</button>
+        </div>
+      </div>
+      <div class="cat-profile">
+        <img src="images/Momo.png" alt="" class="cat-photo">
+        <div class="about-cat">
+          <h2 class="cat-name">Momo</h2>
+          <div class="basic-info">
+            <p>Gender: Female</p>
+            <p>Breed: British longhair </p>
+            <p>Date of birth: 19.02.2024 r</p>
+          </div>
+          <button class="more-abt-cats">More</button>
+        </div>
+      </div>
+      <div class="cat-profile">
+        <img src="images/Emma.jpg" alt="" class="cat-photo">
+        <div class="about-cat">
+          <h2 class="cat-name">Emma</h2>
+          <div class="basic-info">
+            <p>Gender: Female</p>
+            <p>Breed: Ragdoll </p>
+            <p>Date of birth: 16.02.2019 r</p>
+          </div>
+          <button class="more-abt-cats">More</button>
+        </div>
+      </div>
+      <button class="swipe-btn">
+        <img src="icons/right.svg" alt="swipe-right">
+      </button>
+    </div>
+    <div class="add-cat">
+      <button class="add-cat-btn"> <img src="icons/Add.svg" alt="add"> ADD CAT</button>
+    </div>
+    
+    <!-- <form action="" id="add-cat">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Name" />
+      </div>
+      <div>
+        <label>Gender:</label>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" value="male" />
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" value="female" />
+      </div>
+      <div>
+        <label for="breed">Breed:</label>
+        <input type="text" name="breed" id="breed" placeholder="Breed" />
+      </div>
+      <div>
+        <label for="birth">Date of birth:</label>
+        <input type="date" name="birth" id="birth" />
+      </div>
+      <button type="submit">Submit</button>
+    </form> -->
     <div id="app"></div>
     <script type="module" src="/main.js"></script>
   </body>
