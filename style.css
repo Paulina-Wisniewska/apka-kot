@@ -65,6 +65,27 @@ header {
   align-items: center;
 }
 
+.info {
+  background-color: #fff;
+  max-width: 1200px;
+  max-height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  justify-content: space-around;
+}
+
+.cat-main-photo {
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 50px;
+  padding: 10px;
+}
+
 .user-account {
   display: flex;
   flex-direction: row;
@@ -134,13 +155,29 @@ header {
   padding-bottom: 20px;
 }
 
+.cat-info {
+  text-align: center;
+  color: var(--accent);
+  line-height: 35px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin-right: 120px;
+  font-size: 20px;
+}
+
+.name {
+  font-size: 64px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
 .cat-name {
   color: var(--secondary);
   font-weight: 500;
   padding-bottom: 10px;
 }
 
-.more-abt-cats {
+.more-abt-cats, .view-more {
   border: none;
   background-color: var(--secondary);
   color: #ffff;
@@ -152,14 +189,16 @@ header {
   font-size: 20px;
 }
 
-.add-cat {
+.add-cat, .add-note {
   display: flex;
   justify-content: flex-end;
   margin-top: 100px;
   padding: 30px;
 }
 
-.add-cat-btn {
+.add-cat-btn, .add-note-btn {
+  position: fixed;
+  top: 700px;
   border: none;
   background-color: var(--secondary);
   color: #ffff;
@@ -171,4 +210,42 @@ header {
   width: 200px;
   font-size: 20px;
   cursor: pointer;
+}
+
+.daily-notes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.daily-notes-h {
+  color: #ffff;
+  font-size: 50px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.date {
+  color: var(--accent);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.daily-note-view {
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.note {
+  top: 370px;
+  background-color: #ffff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 330px;
 }
