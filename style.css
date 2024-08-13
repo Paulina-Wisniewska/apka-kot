@@ -1,7 +1,9 @@
 /*
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 /*
@@ -22,35 +24,49 @@ body {
 /*
   5. Improve media defaults
 */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 /*
   6. Remove built-in form typography styles
 */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 /*
   7. Avoid text overflows
 */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 /*
   8. Create a root stacking context
 */
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
 :root {
-  --main: #FAEDCD;
-  --secondary: #CCD5AE;
-  --accent: #D4A373;
-  --secondary-light: #E9EDC9;
-  --main-light: #FEFAE0;
+  --main: #faedcd;
+  --secondary: #ccd5ae;
+  --accent: #d4a373;
+  --secondary-light: #e9edc9;
+  --main-light: #fefae0;
 }
 body {
   background-color: var(--main);
@@ -177,7 +193,8 @@ header {
   padding-bottom: 10px;
 }
 
-.more-abt-cats, .view-more {
+.more-abt-cats,
+.view-more {
   border: none;
   background-color: var(--secondary);
   color: #ffff;
@@ -189,14 +206,16 @@ header {
   font-size: 20px;
 }
 
-.add-cat, .add-note {
+.add-cat,
+.add-note {
   display: flex;
   justify-content: flex-end;
   margin-top: 100px;
   padding: 30px;
 }
 
-.add-cat-btn, .add-note-btn {
+.add-cat-btn,
+.add-note-btn {
   position: fixed;
   top: 700px;
   border: none;
@@ -248,4 +267,90 @@ header {
   padding: 20px;
   text-align: center;
   width: 330px;
+}
+
+.add-cat-form {
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.add-cat-content {
+  background-color: var(--main);
+  margin: auto;
+  max-width: 1100px;
+  height: 600px;
+  border-radius: 16px;
+  /* display: flex; */
+}
+
+.close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.close-btn {
+  background-color: var(--secondary);
+  color: #ffff;
+  border: none;
+  width: 110px;
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  padding: 7px;
+}
+
+.form-add-img {
+  max-width: 330px;
+}
+
+.form-main-content {
+  display: flex;
+  justify-content: space-around;
+  color: var(--accent);
+}
+
+.submit-btn {
+  background-color: var(--secondary);
+  color: #ffff;
+  border: none;
+  width: 110px;
+  border-radius: 16px;
+  cursor: pointer;
+  width: 140px;
+  height: 50px;
+}
+
+.form-info {
+  line-height: 30px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.form-data {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+input{
+  border: none;
+  border-radius: 16px;
+  padding: 2px 7px;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
 }
