@@ -68,6 +68,45 @@
           <img src="icons/right.svg" alt="swipe-right">
         </button>
       </div>
+      <div class="add-cat-form">
+        <div class="add-cat-content">
+          <div class="close">
+            <button class="close-btn">
+              <img src="icons/close.svg" alt="close" />CLOSE
+            </button>
+          </div>
+          <div class="form-main-content">
+            <div class="add-photo">
+            <div class="form-add-img">
+              <img src="images/upload img.jpg" alt="upload img" />
+            </div>
+            <div>
+            <label for="myfile"></label>
+            <input type="file" id="myfile" name="myfile">
+          </div>
+        </div>
+            <div class="form-info">
+              <form>
+                <div class="form-data">
+                  <label for="birth">Date of birth:</label>
+                  <input type="date" name="birth" id="birth" placeholder="DD/MM/YYYY" />
+                </div>
+                <div class="form-data">
+                  <label for="humor">Humor:</label>
+                  <input type="number" name="humor" id="humor" placeholder="1-10" min="1" max="10">
+                </div>
+                <div class="form-data">
+                  <label for="note-input">Note:</label>
+                  <textarea id="note-input" name="note-input" rows="6" cols="40">  Add note...</textarea>
+                </div>
+                <div class="submit">
+                <button type="submit" class="submit-btn">Submit</button>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     <div class="add-note">
         <button class="add-note-btn"> <img src="icons/Add.svg" alt="add"> ADD NOTE</button>
     </div>
