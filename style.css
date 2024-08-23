@@ -72,6 +72,10 @@ body {
   background-color: var(--main);
   font-family: "Montserrat", sans-serif;
 }
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
 
 header {
   background-color: var(--secondary);
@@ -375,5 +379,15 @@ input{
 .add-photo {
   display: flex;
   flex-direction: column;
+}
 
+.hidden {
+  display: none;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  margin-left: 20px;
+  cursor: pointer;
 }

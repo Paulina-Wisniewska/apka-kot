@@ -1,114 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cat page</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <div class="user-account">
-          <img src="icons/account.svg" alt="account">
-          <button class="login-btn">Login</button>
-        </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="menu">
+      <div>
+        <a href="http://localhost:5173/"
+          ><button class="back-btn">
+            <img src="icons/Back Arrow.svg" alt="back" /></button
+        ></a>
+      </div>
+      <div class="user-account">
+        <img src="icons/account.svg" alt="account" />
+        <button class="login-btn">Login</button>
+      </div>
     </header>
     <div class="info">
-        <div class="cat-main-photo">
-            <img src="images/momo-main.jpg" alt="cat-photo">
-        </div>
-        <div class="cat-info">
-            <h1 class="name">MOMO</h1>
-            <p>Gender: Female</p>
-            <p>Breed: British longhair </p>
-            <p>Date of birth: 19.02.2024 r</p>
-        </div>
+      <div class="cat-main-photo">
+        <img src="images/momo-main.jpg" alt="cat-photo" />
+      </div>
+      <div class="cat-info">
+        <h1 class="name">MOMO</h1>
+        <p>Gender: Female</p>
+        <p>Breed: British longhair</p>
+        <p>Date of birth: 19.02.2024 r</p>
+      </div>
     </div>
     <div>
       <h1 class="daily-notes-h">DAILY NOTES</h1>
     </div>
     <div class="daily-notes">
-        <button class="swipe-btn">
-          <img src="icons/left.svg" alt="swipe-left">
-        </button>
-        <div class="daily-note-view">
-          <div class="note">
-            <h2 class="date">01.06.2024 r.</h2>
-            <div class="basic-info">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Curabitur quis cursus mi, eu lacinia metus.</p>
-            </div>
-            <button class="view-more">View more</button>
+      <button class="swipe-btn">
+        <img src="icons/left.svg" alt="swipe-left" />
+      </button>
+      <div class="daily-note-view">
+        <div class="note">
+          <h2 class="date">01.06.2024 r.</h2>
+          <div class="basic-info">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+              quis cursus mi, eu lacinia metus.
+            </p>
           </div>
+          <button class="view-more">View more</button>
         </div>
-        <div class="daily-note-view">
-          <div class="note">
-            <h2 class="date">26.05.2024 r.</h2>
-            <div class="basic-info">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Curabitur quis cursus mi, eu lacinia metus.</p>
-            </div>
-            <button class="view-more">View more</button>
-          </div>
-        </div>
-        <div class="daily-note-view">
-          <div class="note">
-            <h2 class="date">17.05.2024 r.</h2>
-            <div class="basic-info">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Curabitur quis cursus mi, eu lacinia metus.</p>
-            </div>
-            <button class="view-more">View more</button>
-          </div>
-        </div>
-        <button class="swipe-btn">
-          <img src="icons/right.svg" alt="swipe-right">
-        </button>
       </div>
-      <div class="add-cat-form">
-        <div class="add-cat-content">
-          <div class="close">
-            <button class="close-btn">
-              <img src="icons/close.svg" alt="close" />CLOSE
-            </button>
+      <div class="daily-note-view">
+        <div class="note">
+          <h2 class="date">26.05.2024 r.</h2>
+          <div class="basic-info">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+              quis cursus mi, eu lacinia metus.
+            </p>
           </div>
-          <div class="form-main-content">
-            <div class="add-photo">
+          <button class="view-more">View more</button>
+        </div>
+      </div>
+      <div class="daily-note-view">
+        <div class="note">
+          <h2 class="date">17.05.2024 r.</h2>
+          <div class="basic-info">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+              quis cursus mi, eu lacinia metus.
+            </p>
+          </div>
+          <button class="view-more">View more</button>
+        </div>
+      </div>
+      <button class="swipe-btn">
+        <img src="icons/right.svg" alt="swipe-right" />
+      </button>
+    </div>
+    <div class="add-cat-form hidden">
+      <div class="add-cat-content">
+        <div class="close">
+          <button class="close-btn">
+            <img src="icons/close.svg" alt="close" />CLOSE
+          </button>
+        </div>
+        <div class="form-main-content">
+          <div class="add-photo">
             <div class="form-add-img">
               <img src="images/upload img.jpg" alt="upload img" />
             </div>
             <div>
-            <label for="myfile"></label>
-            <input type="file" id="myfile" name="myfile">
+              <label for="myfile"></label>
+              <input type="file" id="myfile" name="myfile" />
+            </div>
           </div>
-        </div>
-            <div class="form-info">
-              <form>
-                <div class="form-data">
-                  <label for="birth">Date of birth:</label>
-                  <input type="date" name="birth" id="birth" placeholder="DD/MM/YYYY" />
-                </div>
-                <div class="form-data">
-                  <label for="humor">Humor:</label>
-                  <input type="number" name="humor" id="humor" placeholder="1-10" min="1" max="10">
-                </div>
-                <div class="form-data">
-                  <label for="note-input">Note:</label>
-                  <textarea id="note-input" name="note-input" rows="6" cols="40">  Add note...</textarea>
-                </div>
-                <div class="submit">
+          <div class="form-info">
+            <form>
+              <div class="form-data">
+                <label for="birth">Date of birth:</label>
+                <input
+                  type="date"
+                  name="birth"
+                  id="birth"
+                  placeholder="DD/MM/YYYY"
+                />
+              </div>
+              <div class="form-data">
+                <label for="humor">Humor:</label>
+                <input
+                  type="number"
+                  name="humor"
+                  id="humor"
+                  placeholder="1-10"
+                  min="1"
+                  max="10"
+                />
+              </div>
+              <div class="form-data">
+                <label for="note-input">Note:</label>
+                <textarea id="note-input" name="note-input" rows="6" cols="40">
+  Add note...</textarea
+                >
+              </div>
+              <div class="submit">
                 <button type="submit" class="submit-btn">Submit</button>
               </div>
-              </form>
-            </div>
+            </form>
           </div>
         </div>
       </div>
-    <div class="add-note">
-        <button class="add-note-btn"> <img src="icons/Add.svg" alt="add"> ADD NOTE</button>
     </div>
-</body>
+    <div class="add-note">
+      <button class="add-note-btn">
+        <img src="icons/Add.svg" alt="add" /> ADD NOTE
+      </button>
+    </div>
+    <script type="module" src="/cat.js"></script>
+  </body>
 </html>
