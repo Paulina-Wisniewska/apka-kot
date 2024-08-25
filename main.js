@@ -2,7 +2,7 @@ const modal = document.querySelector(".add-cat-form");
 const openButton = document.querySelector(".add-cat-btn");
 const closeButtton = document.querySelector(".close-btn");
 const moreAbtCats = document.querySelector(".more-abt-cats");
-// const addCatForm = document.querySelector('.submit-btn');
+const swipeRight = document.querySelector(".swipe-right");
 
 const openModal = () => {
   modal.classList.remove("hidden");
@@ -16,22 +16,6 @@ const closeModal = () => {
 
 closeButtton.addEventListener("click", closeModal);
 
-// window.onload = () => {
-//     const cats = JSON.parse(localStorage.getItem("firstCat"));
-
-// }
-
-// addCatForm.addEventListener('submit', (event) => {
-//     event.preventDefault();
-//     const data = new FormData(event.target);
-//     const dataObject = Object.fromEntries(data.entries());
-// 	console.log(dataObject);
-
-//     localStorage.setItem("firstCat", JSON.stringify(dataObject));
-
-//     addCatForm.reset();
-// });
-
 const fakeCats = [
   {
     id: "0",
@@ -39,23 +23,49 @@ const fakeCats = [
     gender: "male",
     breed: "maine coon",
     dob: "10.02.2021",
+    imgPath: "images/Lucyfer.jpg",
   },
   {
     id: "1",
-    name: "Lucyfer",
-    gender: "male",
-    breed: "maine coon",
-    dob: "10.02.2021",
+    name: "Momo",
+    gender: "Female",
+    breed: "British longhair",
+    dob: "19.02.2024",
+    imgPath: "images/Momo.png",
   },
   {
     id: "2",
-    name: "Lucyfer",
-    gender: "male",
-    breed: "maine coon",
-    dob: "10.02.2021",
+    name: "Emma",
+    gender: "Female",
+    breed: "Ragdoll",
+    dob: "16.02.2019",
+    imgPath: "images/Emma.jpg",
   },
 ];
 
-fakeCats.forEach((cat) => {
-    //logika do wyswietlenia kota
-})
+const renderSingleCat = (cat) => {
+  const { name, gender, breed, dob, imgPath } = cat;
+  const newCat = document.createElement("div");
+  newCat.className = "cat-profile";
+
+  newCat.innerHTML = `<img src=${imgPath} alt="" class="cat-photo" />
+        <div class="about-cat">
+          <h2 class="cat-name">${name}</h2>
+          <div class="basic-info">
+            <p>Gender: ${gender}</p>
+            <p>Breed: ${breed}</p>
+            <p>Date of birth: ${dob} r</p>
+          </div>
+          <a href="http://localhost:5173/cat.html"><button class="more-abt-cats">More</button></a>
+        </div>`;
+
+  swipeRight.insertAdjacentElement("beforebegin", newCat);
+};
+
+const renderAllCats = () => {
+  fakeCats.forEach((cat) => {
+    renderSingleCat(cat);
+  });
+};
+
+window.onload = renderAllCats();
