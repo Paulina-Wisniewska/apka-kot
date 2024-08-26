@@ -1,7 +1,23 @@
+import { createClient } from "@supabase/supabase-js";
+const supabaseApiKey = import.meta.env.VITE_SUPABASE_API_KEY;
+const supabaseApiUrl = import.meta.env.VITE_SUPABASE_PROJECT_URL;
+const supabase = createClient(supabaseApiUrl, supabaseApiKey);
+
+const fetchCats = async () => {
+  try {
+    const { data, error } = await supabase.from("cats").select();
+
+    if (error) throw new Error("There was an error while fetching cats");
+
+    return data;
+  } catch (e) {
+    console.log(e);
+  }
+};
+
 const modal = document.querySelector(".add-cat-form");
 const openButton = document.querySelector(".add-cat-btn");
 const closeButtton = document.querySelector(".close-btn");
-const moreAbtCats = document.querySelector(".more-abt-cats");
 const swipeRight = document.querySelector(".swipe-right");
 
 const openModal = () => {
@@ -16,39 +32,12 @@ const closeModal = () => {
 
 closeButtton.addEventListener("click", closeModal);
 
-const fakeCats = [
-  {
-    id: "0",
-    name: "Lucyfer",
-    gender: "male",
-    breed: "maine coon",
-    dob: "10.02.2021",
-    imgPath: "images/Lucyfer.jpg",
-  },
-  {
-    id: "1",
-    name: "Momo",
-    gender: "Female",
-    breed: "British longhair",
-    dob: "19.02.2024",
-    imgPath: "images/Momo.png",
-  },
-  {
-    id: "2",
-    name: "Emma",
-    gender: "Female",
-    breed: "Ragdoll",
-    dob: "16.02.2019",
-    imgPath: "images/Emma.jpg",
-  },
-];
-
-const renderSingleCat = (cat) => {
-  const { name, gender, breed, dob, imgPath } = cat;
+const renderSingleCat = (cat, photo) => {
+  const { name, gender, breed, dob } = cat;
   const newCat = document.createElement("div");
   newCat.className = "cat-profile";
 
-  newCat.innerHTML = `<img src=${imgPath} alt="" class="cat-photo" />
+  newCat.innerHTML = `<img src=${photo} alt="" class="cat-photo" />
         <div class="about-cat">
           <h2 class="cat-name">${name}</h2>
           <div class="basic-info">
@@ -62,9 +51,18 @@ const renderSingleCat = (cat) => {
   swipeRight.insertAdjacentElement("beforebegin", newCat);
 };
 
-const renderAllCats = () => {
-  fakeCats.forEach((cat) => {
-    renderSingleCat(cat);
+const renderAllCats = async () => {
+  const data = await fetchCats();
+  const catsLength = data.length;
+  const catPhotos = await fetch(
+    `https://api.thecatapi.com/v1/images/search?limit=${catsLength}&api_key=${import.meta.env.VITE_CAT_API_KEY}`
+  ).then((res) => res.json());
+
+  const catUrls = catPhotos.map(cat => cat.url);
+
+  data.forEach((cat, index) => {
+    const photo = catUrls[index];
+    renderSingleCat(cat, photo);
   });
 };
 
