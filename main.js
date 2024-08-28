@@ -19,6 +19,7 @@ const modal = document.querySelector(".add-cat-form");
 const openButton = document.querySelector(".add-cat-btn");
 const closeButtton = document.querySelector(".close-btn");
 const swipeRight = document.querySelector(".swipe-right");
+const form = document.querySelector(".add-form");
 
 const openModal = () => {
   modal.classList.remove("hidden");
@@ -67,3 +68,19 @@ const renderAllCats = async () => {
 };
 
 window.onload = renderAllCats();
+
+
+const handleSubmit = async (event) => {
+  const formData = new  FormData(event.target);
+  const name = formData.get("name");
+  const breed = formData.get("breed");
+  const gender = formData.get("gender");
+  const birth = formData.get("birth");
+  const getCat = await supabase.from('cats').insert({name: `${name}`,breed: `${breed}`, dob: `${birth}`, gender:`${gender}`});
+
+};
+
+form.addEventListener("submit", handleSubmit);
+
+
+
